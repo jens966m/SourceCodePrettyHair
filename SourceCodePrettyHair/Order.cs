@@ -14,9 +14,11 @@ namespace SourceCodePrettyHair
         public int Quantity;
         public int Id;
 
+
         public Order(int id)
         {
             Id = id;
+            
 
         }
         public Order(string orderDate, string deleveriDate, int productTypeId, int quantity, int id)
