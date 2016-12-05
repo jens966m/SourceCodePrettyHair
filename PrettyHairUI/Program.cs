@@ -9,6 +9,8 @@ namespace PrettyHairUI
 {
     class Program
     {
+        
+
 
         static void Main(string[] args)
         {
@@ -20,15 +22,13 @@ namespace PrettyHairUI
 
         public void Run()
         {
-            OrderRepository orderRepo = new OrderRepository();
-            Order newOrder = new Order(57);
-            Email e = new Email();
-            e.Subscribe(orderRepo);
-
-            orderRepo.AddOrderToList(newOrder);
-
-
-            Console.ReadLine();
+            ConsoleFunctions konsolfunktioner = new ConsoleFunctions();
+            konsolfunktioner.ShowProductList();
+            konsolfunktioner.CreateOrderByConsole();
+            konsolfunktioner.ProcessOrder();
+            konsolfunktioner.ShowProductList();
+            Console.ReadKey();
+                         
         }
 
     }

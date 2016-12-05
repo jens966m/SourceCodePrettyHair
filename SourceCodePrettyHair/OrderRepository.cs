@@ -11,7 +11,8 @@ namespace SourceCodePrettyHair
         public List<Order>OrderList = new List<Order>();
         public event MailHandler Email;
         public EventArgs e = null;
-
+        public bool inStock;
+       
 
         public delegate void MailHandler(OrderRepository o, EventArgs e);
         public void OrderEvent(OrderRepository o)
@@ -21,6 +22,7 @@ namespace SourceCodePrettyHair
             {
                 Email(o, e);
             }
+
 
         }
         public void AddOrderToList(Order o)

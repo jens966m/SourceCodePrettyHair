@@ -17,8 +17,16 @@ namespace SourceCodePrettyHair
         }
         private void MailSent(OrderRepository o, EventArgs e)
         {
-            System.Console.WriteLine("E-mail Sent");
-         
+            if (o.inStock == true)
+            {
+                System.Console.WriteLine("E-mail Sent");
+               
+            }
+            
+            else
+            {
+                System.Console.WriteLine("E-mail Sent. Not in stock");
+            }
         }
     }
 }
